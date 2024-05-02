@@ -49,13 +49,13 @@ main {
     overflow-x: hidden;
     background-color: #ececdd;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display:flex;
     flex-direction: column;
 }
 
 .teste {
-    position: fixed;
+    position:sticky;
     width: 100%;
     height: max-content;
     bottom: 0;
@@ -65,10 +65,11 @@ content {
     background-color: #f5db93;
     width: 100%;
     height: 10vh;
-    max-height: 60px;
-    display: flex;
+    top: 0;
+    max-height: 100px;
     position: sticky;
-    bottom: 0;
+    display: flex;
+    align-items: center; /* Centralizar verticalmente os itens */
 }
 
 content input {
@@ -100,13 +101,18 @@ content button.send:hover {
     transform: scale(1.1);
 }
 
+content button#mais:hover {
+    background-color: rgb(247, 227, 178);
+    transform: scale(1.1);
+}
+
 .mensagem {
     background-color: rgb(253, 232, 185);
     padding: 10px;
     width: fit-content;
     height: fit-content;
     margin-top: 5px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     margin: 10px;
     border: solid 1px black;
     border-radius: 10px 20px 0px 10px;
@@ -114,3 +120,116 @@ content button.send:hover {
     right: 0;
     max-width: 100vh;
 }
+
+.mensagemPato {
+    background-color: rgb(253, 232, 185);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 10px 20px 10px 0px;
+    right: 0;
+    max-width: 100vh;
+}
+
+main img {
+    max-width: 50vh;
+    max-height: 50vh;
+    background-color: rgb(253, 232, 185);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 20px 20px 0px 20px;
+    align-self: flex-end;
+    right: 0;
+    max-width: 40%;
+}
+
+main img.pato {
+    background-color: rgb(253, 232, 185);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 20px 20px 20px 0px;
+    right: 0;
+    max-width: 40%;
+    align-self: flex-start;
+}
+
+div.menu{
+    position: fixed;
+    bottom: 10vh;
+    height:fit-content;
+    width: 30vh;
+    background-color: #b1a78d;
+    border-radius: 10px 10px 0 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.menu button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+div.menu button:hover {
+    color: rgb(173, 173, 173);
+}
+
+.ContainerImagem {
+    display: none;
+    gap: 2vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    margin: 0;
+    background-color: #ffffff;
+    border-color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    left: 0;
+    max-width: 40vh;
+  }
+
+  .ContainerImagem input::file-selector-button {
+    color:white;
+    background-color: blue;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+  }
+
+  .ContainerImagem input::file-selector-button:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  div#image {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top: 40%;
+    left: 40%;
+  }

@@ -20,21 +20,35 @@
     </header>
     <main id="campoDeMensagem">
         
-        <div class="teste">
-            <content>
-                <button id="mais"><span class="material-symbols-outlined">
-                    add_circle
-                    </span></button>
-                <input type="text" id="mensagem">
-                <button class="send" onclick="enviar()"><span class="material-symbols-outlined">
-                    send
-                    </span></button>
-                    <button class="send"><span class="material-symbols-outlined">
-                        mic
-                        </span></button>
-            </content>
-        </div>
     </main>
+    <div class="teste">
+        <content>
+            <button id="mais" onmouseenter="menu(true)"><span class="material-symbols-outlined">
+                add_circle
+                </span></button>
+            <input type="text" id="mensagem">
+            <button class="send" onclick="enviar()"><span class="material-symbols-outlined">
+                send
+                </span></button>
+                <button class="send"><span class="material-symbols-outlined">
+                    mic
+                    </span></button>
+        </content>
+    </div>
+
+    <div class="menu" onclick="menu(false)">
+       <button onclick="enviarFoto(0)">Imagem</button>
+       <button>PDF</button>
+       <button>Áudio</button>
+       <button>Vídeo</button>
+    </div>
+
+<div id="image">
+        <label for="images" class="ContainerImagem">
+            <span>Solte a Imagem aqui</span>
+            ou
+            <input class="imagem" type="file" onchange="enviarFoto(1)">
+          </label></div>
 
     <script src="script.js"></script>
 </body>
