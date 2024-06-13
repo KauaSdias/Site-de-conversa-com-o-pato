@@ -11,7 +11,8 @@ header {
     max-height: 100px;
     position: sticky;
     display: flex;
-    align-items: center; /* Centralizar verticalmente os itens */
+    align-items: center; 
+    box-shadow: 4px 6px 13px -5px rgba(0, 0, 0, 0.404);
 }
 
 header p {
@@ -27,10 +28,16 @@ header p span {
     font-weight: 900;
 }
 
-header a {
+header button {
     margin: 1vh;
     text-decoration: none;
+    background: none;
+    border: none;
     color: white;
+}
+
+header button:hover {
+    color: gray
 }
 
 header img {
@@ -69,7 +76,8 @@ content {
     max-height: 100px;
     position: sticky;
     display: flex;
-    align-items: center; /* Centralizar verticalmente os itens */
+    align-items: center;
+    box-shadow: 4px -4px 13px -5px rgba(0,0,0,0.75);
 }
 
 content input {
@@ -80,6 +88,7 @@ content input {
     border-radius: 20px;
     border: none;
     text-indent: 20px;
+    box-shadow: 4px 6px 13px -5px rgba(0, 0, 0, 0.404);
 }
 
 content button {
@@ -195,10 +204,16 @@ div.menu button:hover {
 .ContainerImagem {
     display: none;
     gap: 2vh;
+    margin-top: 5%;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    z-index: 99;
+    width: 80%;
+    height: 80%;
     padding: 20px;
     border-radius: 10px;
     border: 2px dashed #555;
@@ -233,3 +248,123 @@ div.menu button:hover {
     top: 40%;
     left: 40%;
   }
+
+dialog{
+    display: none;
+    margin-top: 4.8%;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    width: 80%;
+    height: 80.1%;
+    box-shadow: 6px 5px 20px 3px rgba(0, 0, 0, 0.144);
+    background-color: #ffeb9328;
+    border: none;
+}
+
+dialog::backdrop {
+    color: rgb(0 0 0 / .5);
+}
+
+dialog h5 {
+    color: white;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+}
+
+dialog img {
+    margin: 0.5vh;
+    width: 30vh;
+    height: 30vh;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50vh;
+    box-shadow: 6px 5px 20px 3px rgba(0, 0, 0, 0.205);
+
+}
+
+
+dialog button:hover {
+    transform: scale(1.1);
+}
+
+dialog button.end {
+    margin: 10px;
+    background-color: red;
+    color: white;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10vh;
+    max-width: 90px;
+    max-height: 90px;
+    border: none;
+    box-shadow: 0 10px 0 red inset, 0 0 10px 4px rgba(255, 0, 0, 0.267);
+}
+
+dialog button.mic {
+    margin: 10px;
+    background-color: rgb(221, 151, 0);
+    color: white;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10vh;
+    max-width: 90px;
+    max-height: 90px;
+    border: none;
+    box-shadow: 0 10px 0 rgb(221, 151, 0) inset, 0 0 10px 4px rgba(221, 151, 0, 0.274);
+}
+
+dialog button.after {
+    content: "asklda";
+}
+
+div.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #f5db93;
+    bottom: 0;
+    width: 100%;
+}
+
+div.header {
+    display: flex;
+    position: absolute;
+    background-color: #f5db93;
+    top: 0;
+    width: 100%;
+}
+
+dialog button.back {
+    margin: 10px;
+    background: none;
+    color: white;
+    width: 10vh;
+    height: 10vh;
+    max-width: 90px;
+    max-height: 90px;
+    border: none;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+dialog button.more {
+    margin: 10px;
+    background-color: rgb(218, 188, 125);
+    color: white;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 10vh;
+    max-width: 90px;
+    max-height: 90px;
+    border: none;
+    box-shadow: 0 10px 0 rgb(172, 149, 101, 0) inset, 0 0 10px 4px rgba(172, 150, 101, 0.377);
+    position: absolute;
+    right: 0;
+}
